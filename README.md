@@ -1,6 +1,7 @@
 # basic-architecture
 基础架构（版本：Dalston.SR1）
-</br>1、config-repo：配置文件目录，可以将此目录放在单独的git路径下，要不然会将git下的全都下载下来，这里为了方便，就集中放置;
+</br>1、config-repo：配置文件目录，需要将此目录放在单独的git路径下，要不然会将git下的全都下载下来，这里为了方便，就集中放置;
+  另外，因为需要配置webhook，所以在push代码的时候，需要确定只能是配置文件更新才引起webhook发起/bus/refresh/请求，这里暂时不做webhook通知，采用postman测试
 </br>2、
 </br>3、
 </br>4、
