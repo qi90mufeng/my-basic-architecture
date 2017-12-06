@@ -35,3 +35,8 @@
 1、配置默认存储在tmp文件目录，linux系统默认会清理一定时间没有更新的tmp目录下的文件，所以增加以下配置：
   #git的配置文件会加载到本地的目录
   spring.cloud.config.server.git.basedir=D:/git-config
+  
+  
+  
+ </br>查阅了很多资料，其他笔者的url如下
+ </br><url>https://gitee.com/gongxusheng/spring-config-demo</url>
