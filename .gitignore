@@ -4,8 +4,8 @@
 *.iml
 *.jar
 *.original
-discovery-server/.classpath
-discovery-server/.project
-discovery-server/.settings/*
-discovery-server/target/*
+*/.classpath
+*/.project
+*/.settings/*
+*/target/*
 .idea/*
