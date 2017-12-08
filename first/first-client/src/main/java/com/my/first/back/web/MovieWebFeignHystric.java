@@ -11,10 +11,10 @@ import org.springframework.stereotype.Component;
  * 服务降级
  */
 @Component
-public class MovieWebFeignFallBack implements MovieWebFeignClient {
+public class MovieWebFeignHystric implements MovieWebFeignClient {
 
     @Override
     public String hi(String customerId) {
-        return "hi, service error";
+        return "hi," + customerId + " web service error";
     }
 }

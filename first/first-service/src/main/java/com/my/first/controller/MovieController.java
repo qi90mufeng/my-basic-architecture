@@ -1,16 +1,12 @@
 package com.my.first.controller;
 
+import com.my.first.definition.MovieResourceDefinition;
 import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
-import org.springframework.web.client.RestTemplate;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/movie")
-public class MovieController {
+public class MovieController implements MovieResourceDefinition{
 
     @GetMapping("/movie/{id}")
     @HystrixCommand(fallbackMethod = "findByIdFailback")
@@ -19,6 +15,12 @@ public class MovieController {
         // VIP virtual IP
         // HAProxy Heartbeat
         return new User();
+    }
+
+    @Override
+    @RequestMapping(value = "/hi/{id}", method = RequestMethod.GET)
+    public String hi(@PathVariable("id") String customerId){
+        return "hi, NO." + customerId;
     }
 
     public User findByIdFailback(Long id) {

@@ -12,9 +12,8 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("/first-app")
-public class MovieAppController implements MovieAppFeignClient{
+public class MovieAppController{
 
-    @Override
     @RequestMapping(value = "/hi/{id}", method = RequestMethod.POST)
     public String hi(@RequestHeader("id") String customerId) {
         return "";

@@ -4,11 +4,11 @@
  */
 package com.my.first.client.app;
 
-import com.my.first.back.app.MovieAppFeignFallBack;
-import com.my.first.definition.MovieAppDefinition;
+import com.my.first.back.app.MovieAppFeignHystric;
+import com.my.first.definition.MovieResourceDefinition;
 import org.springframework.cloud.netflix.feign.FeignClient;
 
-@FeignClient(name = "first-service", path = "/movie", fallback = MovieAppFeignFallBack.class)
-public interface MovieAppFeignClient extends MovieAppDefinition{
+@FeignClient(name = "first-service", path = "/movie", fallback = MovieAppFeignHystric.class)
+public interface MovieAppFeignClient extends MovieResourceDefinition {
 
 }
