@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RequestHeader;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-public interface MoviceWebDefinition {
+public interface MovieAppDefinition {
 
     @RequestMapping(value = "/hi/{id}", method = RequestMethod.POST)
     public String hi(@RequestHeader("id") String customerId);

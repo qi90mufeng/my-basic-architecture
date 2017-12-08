@@ -9,10 +9,11 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
 
 @RestController
-@RequestMapping("/movice")
+@RequestMapping("/movie")
 public class MovieController {
 
     @GetMapping("/movie/{id}")
+    @HystrixCommand(fallbackMethod = "findByIdFailback")
     public User findById(@PathVariable Long id) {
         // http://localhost:7900/simple/
         // VIP virtual IP

@@ -4,7 +4,7 @@
  */
 package com.my.first.controller;
 
-import com.my.first.client.app.MoviceAppFeignClient;
+import com.my.first.client.app.MovieAppFeignClient;
 import org.springframework.web.bind.annotation.RequestHeader;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("/first-app")
-public class MovieAppController implements MoviceAppFeignClient{
+public class MovieAppController implements MovieAppFeignClient{
 
     @Override
     @RequestMapping(value = "/hi/{id}", method = RequestMethod.POST)

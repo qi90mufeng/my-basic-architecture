@@ -4,12 +4,14 @@
  */
 package com.my.first.back.app;
 
-import com.my.first.client.app.MoviceAppFeignClient;
+import com.my.first.client.app.MovieAppFeignClient;
+import org.springframework.stereotype.Component;
 
 /**
  * 服务降级
  */
-public class MoviceFeignFallBack implements MoviceAppFeignClient{
+@Component
+public class MovieAppFeignFallBack implements MovieAppFeignClient{
 
     @Override
     public String hi(String customerId) {
