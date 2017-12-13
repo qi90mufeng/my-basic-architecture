@@ -1,0 +1,3 @@
+query:封装的查询类(与mybatis交互的)
+req:封装的请求类
+resp:封装的响应类
