@@ -1,7 +1,3 @@
-/**
- * sinafenqi.com
- * Copyright (c) 2017 All Rights Reserved.
- */
 package com.my.first.client.web;
 
 import com.my.first.back.web.MovieWebFeignHystric;
